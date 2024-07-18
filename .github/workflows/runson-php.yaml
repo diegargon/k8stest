@@ -16,30 +16,29 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Install system dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y \
-          libxml2-dev \
-          libssl-dev \
-          libcurl4-openssl-dev \
-          libonig-dev \
-          libpng-dev \
-          libjpeg-dev \
-          libfreetype6-dev \
-          libzip-dev \
-          zlib1g-dev \
-          software-properties-common
-        sudo add-apt-repository ppa:ondrej/php -y
-        sudo apt-get update
-        
-    - name: Set up PHP
+    # - name: Install system dependencies
+    #   run: |
+    #     sudo apt-get update
+    #     sudo apt-get install -y \
+    #       libxml2-dev \
+    #       libssl-dev \
+    #       libcurl4-openssl-dev \
+    #       libonig-dev \
+    #       libpng-dev \
+    #       libjpeg-dev \
+    #       libfreetype6-dev \
+    #       libzip-dev \
+    #       zlib1g-dev \
+    #       software-properties-common
+    #     sudo add-apt-repository ppa:ondrej/php -y
+    #     sudo apt-get update
+
+    - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: 'latest'
-        extensions: mbstring, curl, xml
+        php-version: '8.3'
       env:
-        SETUP_PHP_DEBUG: 1
+        debug: true 
 
     - name: Install Composer
       run: |
