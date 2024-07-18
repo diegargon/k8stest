@@ -21,6 +21,8 @@ jobs:
       with:
         php-version: 'latest'
         extensions: mbstring, curl, xml
+      env:
+        SETUP_PHP_DEBUG: 1
         
     - name: Install Composer
       run: |
