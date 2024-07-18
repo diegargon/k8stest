@@ -1,0 +1,27 @@
+name: CI for PHP App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: arc-runner-set
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.4'
+        extensions: mbstring
+
+    - name: Install dependencies
+      run: |
+        composer require --dev phpunit/phpunit
+
+    - name: Run PHPUnit tests
+      run: ./vendor/bin/phpunit --configuration phpunit.xml
