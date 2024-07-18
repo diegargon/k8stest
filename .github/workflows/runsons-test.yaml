@@ -1,4 +1,4 @@
-name: Actions Runner Controller Demo
+name: ARC-k8s-test
 on:
   workflow_dispatch:
 
