@@ -1,10 +1,13 @@
 name: CI for PHP App
 
+
+#Ejecutar en Push/Branch/Main
 on:
   push:
     branches:
       - main
 
+#
 jobs:
   build:
     runs-on: arc-runner-set
@@ -16,8 +19,8 @@ jobs:
     - name: Set up PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '7.4'
-        extensions: mbstring
+        php-version: 'latest'
+        extensions: mbstring, curl, xml
 
     - name: Install dependencies
       run: |
