@@ -25,6 +25,8 @@ jobs:
       uses: shivammathur/setup-php@verbose
       with:
         php-version: '8.3'
+        extensions: mbstring, intl
+        tools: phpunit
       env:
         debug: true 
         update: true
