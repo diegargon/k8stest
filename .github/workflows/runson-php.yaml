@@ -24,13 +24,18 @@ jobs:
     - name: Setup PHP
       uses: shivammathur/setup-php@verbose
       with:
-        php-version: '8.3'
-        extensions: mbstring, intl
+        php-version: 'latest'
+        extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, bcmath, intl, gd, exif, iconv, imagick, json, lz4-kjdev/php-ext-lz4@0.4.3
         tools: phpunit
       env:
         debug: true 
         update: true
-
+    - name: Cache composer dependencies
+      uses: actions/cache@v3
+      with:
+        path: vendor
+        key: composer-${{ hashFiles('composer.lock') }}
+        
     - name: Install Composer
       run: |
         sudo apt-get install -y libsodium-dev
