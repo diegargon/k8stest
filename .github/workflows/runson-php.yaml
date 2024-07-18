@@ -29,9 +29,10 @@ jobs:
         php-version: 'latest'
         extensions: dom, curl, pcre, openssl, hash, sodium, libxml, mbstring, zip, pcntl, pdo, bcmath, intl, gd, exif, iconv, imagick, json, lz4-kjdev/php-ext-lz4@0.4.3, pdo_mysql
         tools: phpunit
+      continue-on-error: false
       env:
-        debug: true 
-        update: true
+        fail-fast: true
+        
     - name: Cache composer dependencies
       uses: actions/cache@v3
       with:
