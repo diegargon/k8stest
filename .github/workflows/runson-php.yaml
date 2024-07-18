@@ -25,7 +25,7 @@ jobs:
       uses: shivammathur/setup-php@verbose
       with:
         php-version: 'latest'
-        extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, bcmath, intl, gd, exif, iconv, imagick, json, lz4-kjdev/php-ext-lz4@0.4.3
+        extensions: dom, curl, pcre, openssl, hash, sodium, libxml, mbstring, zip, pcntl, pdo, bcmath, intl, gd, exif, iconv, imagick, json, lz4-kjdev/php-ext-lz4@0.4.3, pdo_mysql
         tools: phpunit
       env:
         debug: true 
@@ -35,10 +35,9 @@ jobs:
       with:
         path: vendor
         key: composer-${{ hashFiles('composer.lock') }}
-        
+
     - name: Install Composer
       run: |
-        sudo apt-get install -y libsodium-dev
         curl -sS https://getcomposer.org/installer | php
         sudo mv composer.phar /usr/local/bin/composer
   
