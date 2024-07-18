@@ -19,7 +19,9 @@ jobs:
     - name: Install system dependencies
       run: |
         sudo apt-get update
+        sudo apt-get upgrade
         sudo apt-get install -y curl zstd
+        sudo apt --fix-broken install
 
     - name: Setup PHP
       uses: shivammathur/setup-php@verbose
