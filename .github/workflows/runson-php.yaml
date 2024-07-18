@@ -31,10 +31,11 @@ jobs:
 
     - name: Install Composer
       run: |
+        apt-get install -y libsodium-dev
         curl -sS https://getcomposer.org/installer | php
         sudo mv composer.phar /usr/local/bin/composer
   
-    - name: Install dependencies
+    - name: Install PHP dependencies
       run: |
         composer require --dev phpunit/phpunit
 
