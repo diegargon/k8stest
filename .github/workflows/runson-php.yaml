@@ -21,7 +21,12 @@ jobs:
       with:
         php-version: 'latest'
         extensions: mbstring, curl, xml
-
+        
+    - name: Install Composer
+      run: |
+        curl -sS https://getcomposer.org/installer | php
+        sudo mv composer.phar /usr/local/bin/composer
+  
     - name: Install dependencies
       run: |
         composer require --dev phpunit/phpunit
