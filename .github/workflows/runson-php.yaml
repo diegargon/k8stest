@@ -33,11 +33,11 @@ jobs:
       env:
         fail-fast: true
 
-    # - name: Cache composer dependencies
-    #   uses: actions/cache@v3
-    #   with:
-    #     path: vendor
-    #     key: composer-${{ hashFiles('composer.lock') }}
+    - name: Cache composer dependencies
+      uses: actions/cache@v3
+      with:
+        path: vendor
+        key: composer-${{ hashFiles('composer.lock') }}
 
     # - name: Install Composer
     #   run: |
