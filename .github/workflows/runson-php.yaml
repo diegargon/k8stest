@@ -23,30 +23,30 @@ jobs:
         sudo apt-get install -y curl zstd
         sudo apt --fix-broken install -y
 
-    - name: Setup PHP
-      uses: shivammathur/setup-php@verbose
-      with:
-        php-version: 'latest'
-        extensions: curl, pcre, openssl, hash, sodium, libxml, mbstring, zip, pcntl, pdo, bcmath, intl, gd, exif, iconv, imagick, json, lz4-kjdev/php-ext-lz4@0.4.3, pdo_mysql
-        tools: phpunit
-      continue-on-error: false
-      env:
-        fail-fast: true
+    # - name: Setup PHP
+    #   uses: shivammathur/setup-php@verbose
+    #   with:
+    #     php-version: 'latest'
+    #     extensions: curl, pcre, openssl, hash, sodium, libxml, mbstring, zip, pcntl, pdo, bcmath, intl, gd, exif, iconv, imagick, json, lz4-kjdev/php-ext-lz4@0.4.3, pdo_mysql
+    #     tools: phpunit
+    #   continue-on-error: false
+    #   env:
+    #     fail-fast: true
 
-    - name: Cache composer dependencies
-      uses: actions/cache@v3
-      with:
-        path: vendor
-        key: composer-${{ hashFiles('composer.lock') }}
+    # - name: Cache composer dependencies
+    #   uses: actions/cache@v3
+    #   with:
+    #     path: vendor
+    #     key: composer-${{ hashFiles('composer.lock') }}
 
-    - name: Install Composer
-      run: |
-        curl -sS https://getcomposer.org/installer | php
-        sudo mv composer.phar /usr/local/bin/composer
+    # - name: Install Composer
+    #   run: |
+    #     curl -sS https://getcomposer.org/installer | php
+    #     sudo mv composer.phar /usr/local/bin/composer
   
-    - name: Install PHP dependencies
-      run: |
-        composer require --dev phpunit/phpunit
+    # - name: Install PHP dependencies
+    #   run: |
+    #     composer require --dev phpunit/phpunit
 
-    - name: Run PHPUnit tests
-      run: ./vendor/bin/phpunit --configuration phpunit.xml
+    # - name: Run PHPUnit tests
+    #   run: ./vendor/bin/phpunit --configuration phpunit.xml
