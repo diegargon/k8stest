@@ -28,7 +28,7 @@ jobs:
       uses: shivammathur/setup-php@verbose
       with:
         php-version: 'latest'
-        extensions: sodium, curl, pcre, openssl, hash, libxml, mbstring, zip, pcntl, pdo, bcmath, intl, gd, exif, iconv, imagick, json, lz4-kjdev/php-ext-lz4@0.4.3, pdo_mysql
+        extensions: sodium, curl, pcre, openssl, hash, libxml, mbstring, zip, pcntl, pdo, bcmath, intl, exif, iconv, imagick, json, lz4-kjdev/php-ext-lz4@0.4.3, pdo_mysql, gd
         tools: phpunit
       continue-on-error: false
       env:
