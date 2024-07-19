@@ -41,14 +41,14 @@ jobs:
         path: vendor
         key: composer-${{ hashFiles('composer.lock') }}
 
-    # - name: Install Composer
-    #   run: |
-    #     curl -sS https://getcomposer.org/installer | php
-    #     sudo mv composer.phar /usr/local/bin/composer
+    - name: Install Composer
+      run: |
+        curl -sS https://getcomposer.org/installer | php
+        sudo mv composer.phar /usr/local/bin/composer
   
-    # - name: Install PHP dependencies
-    #   run: |
-    #     composer require --dev phpunit/phpunit
+    - name: Install PHP dependencies
+      run: |
+        composer require --dev phpunit/phpunit
 
-    # - name: Run PHPUnit tests
-    #   run: ./vendor/bin/phpunit --configuration phpunit.xml
+    - name: Run PHPUnit tests
+      run: ./vendor/bin/phpunit --configuration phpunit.xml
