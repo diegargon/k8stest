@@ -21,13 +21,13 @@ jobs:
         sudo apt-get update
         sudo apt-get upgrade -y
         sudo apt-get install -y curl zstd
-        sudo apt --fix-broken install -y
+        sudo ldconfig -p | grep libsodium
 
     - name: Setup PHP
       uses: shivammathur/setup-php@verbose
       with:
         php-version: 'latest'
-        extensions: curl, pcre, openssl, hash, sodium, libxml, mbstring, zip, pcntl, pdo, bcmath, intl, gd, exif, iconv, imagick, json, lz4-kjdev/php-ext-lz4@0.4.3, pdo_mysql
+        extensions: sodium, curl, pcre, openssl, hash, libxml, mbstring, zip, pcntl, pdo, bcmath, intl, gd, exif, iconv, imagick, json, lz4-kjdev/php-ext-lz4@0.4.3, pdo_mysql
         tools: phpunit
       continue-on-error: false
       env:
