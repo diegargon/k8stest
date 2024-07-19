@@ -20,8 +20,8 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get upgrade -y
-        sudo apt-get install -y curl zstd
-        sudo ldconfig -p | grep libsodium
+        sudo apt-get install -y curl zstd git
+#        sudo ldconfig -p | grep libsodium
 
     - name: Setup PHP
       uses: shivammathur/setup-php@verbose
