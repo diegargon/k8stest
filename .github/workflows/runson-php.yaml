@@ -21,7 +21,7 @@ jobs:
         sudo apt-get update
         sudo apt-get upgrade -y
         sudo apt-get install -y curl zstd git
-        sudo apt-get install -y libsodium-dev libsodium23 libgd3
+        sudo apt-get install -y libsodium-dev libsodium23 libgd3 libxpm4 libfreetype6-dev  libfontconfig-dev libc6-dev bzip2 ibpcre3-dev ibpcre2-dev
         sudo ldconfig -p                
 
     - name: Setup PHP
