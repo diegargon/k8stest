@@ -25,7 +25,8 @@ jobs:
     - name: Setup PHP
       run: |
         sudo apt-get install -y php
-        
+        sudo apt-get install  php-xml php-json php-mbstring php-tokenizer
+
     - name: Cache composer dependencies
       uses: actions/cache@v3
       with:
