@@ -1,0 +1,40 @@
+name: Deploy Application Docker K8s
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: arc-runner-set
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Run PHP in Docker
+        uses: addnab/docker-run-action@v3
+        with:
+          image: php:8.0-cli # Reemplaza con la versión de PHP que necesites
+          options: -v ${{ github.workspace }}:/workspace
+          run: |
+            cd /workspace
+            php your-script.php # Reemplaza con el comando PHP que necesites ejecutar
+      
+      - name: Build Docker image
+        run: |
+          docker build -t my-docker-repo/my-app:latest .
+      
+      - name: Push Docker image
+        run: |
+          docker push my-docker-repo/my-app:latest
+
+      - name: Deploy to Kubernetes
+        env:
+          KUBECONFIG: ${{ secrets.KUBECONFIG }}
+        run: |
+          kubectl set image deployment/my-app my-app=my-docker-repo/my-app:latest
