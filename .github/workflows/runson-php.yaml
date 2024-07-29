@@ -20,21 +20,12 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get upgrade -y
-        sudo apt-get install -y curl zstd git
-        sudo apt-get install -y libsodium-dev libsodium23 libgd3 libxpm4 libfreetype6-dev libc6-dev bzip2 libpcre3-dev libpcre2-dev
-        sudo apt-get install -y fontconfig-config fonts-dejavu-core libdeflate0 libfontconfig1  libjbig0 libtiff5
-        sudo ldconfig -p                
+        sudo apt-get install -y curl zstd git openssl zip
 
     - name: Setup PHP
-      uses: shivammathur/setup-php@verbose
-      with:
-        php-version: 'latest'
-        extensions: sodium, curl, pcre, openssl, hash, libxml, mbstring, zip, pcntl, pdo, bcmath, intl, exif, iconv, imagick, json
-        tools: phpunit
-      continue-on-error: false
-      env:
-        fail-fast: true
-
+      run: |
+        sudo apt-get install php
+        
     - name: Cache composer dependencies
       uses: actions/cache@v3
       with:
