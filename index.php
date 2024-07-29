@@ -2,5 +2,4 @@
 function greet() {
     return "Hello, World!";
 }
-
 echo greet();
