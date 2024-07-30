@@ -32,9 +32,15 @@ Workflows 2:
     This runner set runs the project in docker
 
     k8s-helms/gha-runner-scale-set-dockernodocker.yaml
+        
+        Simple php Test
+        
         .github/workflows/deploy-k8s-docker.yml
-        .github/workflows/deploy-k8s-docker-2.yml
+            
+        Build image/Dockerfile
 
+        .github/workflows/deploy-k8s-docker-2.yml
+        docker/Dockerfile
 
 WARNING: 
 
