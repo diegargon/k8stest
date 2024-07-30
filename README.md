@@ -1,4 +1,4 @@
-![example workflow](https://github.com/github/docs/actions/workflows/deploy-k8s-docker-2.yml/badge.svg)
+![Build](https://github.com/k8stest/workflows/deploy-k8s-docker-2/badge.svg)
 
 # k8stest
 
