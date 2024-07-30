@@ -1,4 +1,4 @@
-![GithubTest] (https://img.shields.io/badge/Github-Test-blue)
+![GithubTest](https://img.shields.io/badge/Github-Test-blue)
 [![Deploy Application Docker K8s 2](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker-2.yml/badge.svg)](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker-2.yml)
 [![CI for PHP App](https://github.com/diegargon/k8stest/actions/workflows/runson-php.yaml/badge.svg)](https://github.com/diegargon/k8stest/actions/workflows/runson-php.yaml)
 [![Deploy Application Docker K8s](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker.yml/badge.svg)](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker.yml)
@@ -25,7 +25,24 @@ Basic configurations
 
 Controller: (Works with all  self workflows)
     
+    File:
+
     k8s-helms/gha-runner-scale-set-controller.yaml
+
+    Install/Upgrade:
+
+    helm upgrade --install -n arc-systems --create-namespace arc oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set-controller -f gha-runner-scale-set-controller.yaml
+
+
+Runner Set
+      
+    File:
+
+    check workflows
+
+    Install
+    
+    helm upgrade --install -n arc-runners  --create-namespace arc-runner-set  oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set -f gha-runner-scale-set.yaml
 
 
 Workflows 1:
@@ -64,7 +81,7 @@ Point to account not works if is not organization account
 
 githubConfigUrl: "https://github.com/diegargon/"    
 
-Point to repo works with all accounts:
+Point to repo works with all type accounts:
 
 githubConfigUrl: "https://github.com/diegargon/k8stest"    
 
