@@ -1,5 +1,5 @@
 <?php
 function greet() {
-    return "Hello, World!\n";
+    return "Hello, World!";
 }
-echo greet();
+echo greet() ."\n";

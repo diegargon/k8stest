@@ -1,3 +1,5 @@
+![example workflow](https://github.com/github/docs/actions/workflows/deploy-k8s-docker-2.yml/badge.svg)
+
 # k8stest
 
 Testing github actions with self k8s cluster
