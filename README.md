@@ -1,4 +1,4 @@
-![Build](https://github.com/k8stest/workflows/deploy-k8s-docker-2/badge.svg)
+[![Deploy Application Docker K8s 2](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker-2.yml/badge.svg)](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker-2.yml)
 
 # k8stest
 
