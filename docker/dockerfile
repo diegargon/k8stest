@@ -1,5 +1,6 @@
 FROM php:8.2-cli
-RUN ls -la /usr/src/myapp
-COPY . /usr/src/myapp
-WORKDIR /usr/src/myapp
+
+COPY . /myapp
+RUN ls -la /myapp
+WORKDIR /myapp
 CMD [ "php", "./index.php" ]
