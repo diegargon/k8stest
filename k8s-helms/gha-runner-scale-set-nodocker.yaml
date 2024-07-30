@@ -1,0 +1,8 @@
+githubConfigUrl: "https://github.com/diegargon/k8stest"
+githubConfigSecret: pre-defined-secret
+template:
+  spec:
+    containers:
+      - name: runner
+        image: ghcr.io/actions/actions-runner:latest
+        command: ["/home/runner/run.sh"]

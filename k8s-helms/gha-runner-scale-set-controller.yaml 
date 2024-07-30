@@ -1,0 +1,48 @@
+labels: {}
+replicaCount: 1
+
+syncPeriod: 1m
+
+image:
+  repository: "ghcr.io/actions/gha-runner-scale-set-controller"
+  pullPolicy: IfNotPresent
+  tag: ""
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+env:
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""
+
+podAnnotations: {}
+
+podLabels: {}
+
+podSecurityContext: {}
+
+securityContext: {}
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+topologySpreadConstraints: []
+
+volumes: []
+volumeMounts: []
+
+priorityClassName: ""
+
+flags:
+  logLevel: "debug"
+  logFormat: "text"
+  updateStrategy: "immediate"
+
