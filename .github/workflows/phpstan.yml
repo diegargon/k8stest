@@ -1,4 +1,4 @@
-name: CodeSniffer
+name: PhpStan
 #
 on:
   push:
