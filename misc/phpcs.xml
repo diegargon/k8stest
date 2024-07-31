@@ -2,4 +2,5 @@
 <ruleset name="MyProject">
     <rule ref="PSR12"/>
     <exclude-pattern>test/*</exclude-pattern>
+    <exclude-pattern>misc/*</exclude-pattern>
 </ruleset>

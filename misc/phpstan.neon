@@ -3,3 +3,4 @@ parameters:
     excludePaths:
         - /myapp/tests
         - /myapp/vendor
+        - /myapp/misc
