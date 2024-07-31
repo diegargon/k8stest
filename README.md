@@ -27,7 +27,7 @@ Basic configurations
 
 Controller: (Works with all  self workflows)
     
-    File:
+    Files:
 
     k8s-helms/gha-runner-scale-set-controller.yaml
 
@@ -37,10 +37,6 @@ Controller: (Works with all  self workflows)
 
 
 Runner Set
-      
-    File:
-
-    check workflows
 
     Install
     
@@ -49,33 +45,38 @@ Runner Set
 
 Workflows 1:
 
-    This runner set runs the project on k8s default image
-
-    .github/workflows/runons-test
-
-    .github/workflows/runons-php
-
-
-    Runners Set
+    This runner set runs the project on k8s with the default github action image
 
     k8s-helms/gha-runner-scale-set-nodocker.yaml
+
+    Files: 
+
+        .github/workflows/runons-test
+
+        .github/workflows/runons-php
 
 
 Workflows 2:
 
-    This runner set runs the project in docker
+    This runner set runs the project in docker (Works too for no docker)
 
-    k8s-helms/gha-runner-scale-set-dockernodocker.yaml
+    k8s-helms/gha-runner-scale-set-docker.yaml
         
-        Simple php Test
+        ## Simple php Test
         
-        .github/workflows/deploy-k8s-docker.yml
+        Files: 
+
+            .github/workflows/deploy-k8s-docker.yml
             
-        Build image/Dockerfile
+        ## Build image/Dockerfile and run phpunit
 
-        .github/workflows/deploy-k8s-docker-2.yml
+        Files: 
+
+            .github/workflows/deploy-k8s-docker-phpunit.yml
         
-        docker/Dockerfile
+            docker/Dockerfile
+
+
 
 WARNING: 
 
