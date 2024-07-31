@@ -8,10 +8,8 @@ WORKDIR /myapp
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-#RUN composer global require "squizlabs/php_codesniffer=*"
 RUN composer require --dev phpstan/phpstan
 
-ENV PATH="$PATH:/root/.composer/vendor/bin"
+ENV PATH="$PATH:/root/.composer/vendor/bin:/myapp/vendor/bin"
 
-#CMD ["phpcs", "--standard=PSR12", "."]
 CMD ["phpstan", "analyse", "."]
