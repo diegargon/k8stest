@@ -1,9 +1,9 @@
 ![GithubTest](https://img.shields.io/badge/Github-Test-blue)
-[![Deploy Application Docker K8s 2](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker-2.yml/badge.svg)](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker-2.yml)
 [![CI for PHP App](https://github.com/diegargon/k8stest/actions/workflows/runson-php.yaml/badge.svg)](https://github.com/diegargon/k8stest/actions/workflows/runson-php.yaml)
-[![Deploy Application Docker K8s](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker.yml/badge.svg)](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker.yml)
-[![CodeSniffer](https://github.com/diegargon/k8stest/actions/workflows/code-sniffer.yml/badge.svg)](https://github.com/diegargon/k8stest/actions/workflows/code-sniffer.yml)
-[![PhpStan](https://github.com/diegargon/k8stest/actions/workflows/phpstan.yml/badge.svg)](https://github.com/diegargon/k8stest/actions/workflows/phpstan.yml)
+[![Deploy Simple](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker-simple.yml/badge.svg)](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker-simple.yml)
+[![Deploy phpunit](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker-phpunit.yml/badge.svg)](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker-phpunit.yml)
+[![Deploy codesniffer](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker-codesniffer.yml/badge.svg)](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker-codesniffer.yml)
+[![Deploy PhpStan](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker-phpstan.yml/badge.svg)](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker-phpstan.yml)
 ![License](https://img.shields.io/github/license/diegargon/k8stest)
 
 # k8stest
@@ -83,7 +83,7 @@ Workflows 2:
             .github/workflows/deploy-k8s-docker-codesniffer .yml
             
             docker/Dockerfile-codesniffer
-            
+
 
 
 WARNING: 
