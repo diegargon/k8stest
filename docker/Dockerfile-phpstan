@@ -3,6 +3,7 @@ FROM php:8.2-cli
 RUN apt-get update && apt-get install -y curl git unzip
 
 COPY . /myapp
+RUN ls -la .
 RUN ls -la /myapp
 WORKDIR /myapp
 
