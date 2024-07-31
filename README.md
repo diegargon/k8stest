@@ -66,7 +66,7 @@ Workflows 2:
         
         Files: 
 
-            .github/workflows/deploy-k8s-docker.yml
+            .github/workflows/deploy-k8s-docker-simple.yml
             
         ## Build image/Dockerfile and run phpunit
 
@@ -74,8 +74,16 @@ Workflows 2:
 
             .github/workflows/deploy-k8s-docker-phpunit.yml
         
-            docker/Dockerfile
+            docker/Dockerfile-phpunit
 
+        ## Build image/Dockerfile and run CodeSniffer
+
+        Files: 
+
+            .github/workflows/deploy-k8s-docker-codesniffer .yml
+            
+            docker/Dockerfile-codesniffer
+            
 
 
 WARNING: 
