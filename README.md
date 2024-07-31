@@ -1,4 +1,4 @@
-![GithubTest](https://img.shields.io/badge/Github-Test-blue)
+![GithubTest](https://img.shields.io/badge/Github-TestSelfK8s-blue)
 [![CI for PHP App](https://github.com/diegargon/k8stest/actions/workflows/runson-php.yaml/badge.svg)](https://github.com/diegargon/k8stest/actions/workflows/runson-php.yaml)
 [![Deploy Simple](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker-simple.yml/badge.svg)](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker-simple.yml)
 [![Deploy phpunit](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker-phpunit.yml/badge.svg)](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker-phpunit.yml)
@@ -43,7 +43,7 @@ Runner Set
     helm upgrade --install -n arc-runners  --create-namespace arc-runner-set  oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set -f gha-runner-scale-set.yaml
 
 
-Workflows 1:
+Workflows 1 (Without Docker):
 
     This runner set runs the project on k8s with the default github action image
 
@@ -56,7 +56,7 @@ Workflows 1:
         .github/workflows/runons-php
 
 
-Workflows 2:
+Workflows 2 (Docker):
 
     This runner set runs the project in docker (Works too for no docker)
 
@@ -72,16 +72,19 @@ Workflows 2:
 
         Files: 
 
-            .github/workflows/deploy-k8s-docker-phpunit.yml
-        
+            .github/workflows/deploy-k8s-docker-phpunit.yml        
             docker/Dockerfile-phpunit
+
+        ## Build image/Dockerfile and run phpstan
+
+            .github/workflows/deploy-k8s-docker-phpstan.yml
+            misc/phpcs.xml
 
         ## Build image/Dockerfile and run CodeSniffer
 
         Files: 
 
-            .github/workflows/deploy-k8s-docker-codesniffer.yml
-            
+            .github/workflows/deploy-k8s-docker-codesniffer.yml           
             docker/Dockerfile-codesniffer
             misc/phpstan.neon
 
