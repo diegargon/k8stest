@@ -1,5 +1,8 @@
 <?php
-function greet() {
+
+function greet() 
+{
     return "Hello, World!";
 }
+
 echo greet() ."\n";

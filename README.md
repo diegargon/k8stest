@@ -80,10 +80,10 @@ Workflows 2:
 
         Files: 
 
-            .github/workflows/deploy-k8s-docker-codesniffer .yml
+            .github/workflows/deploy-k8s-docker-codesniffer.yml
             
             docker/Dockerfile-codesniffer
-
+            misc/phpstan.neon
 
 
 WARNING: 
