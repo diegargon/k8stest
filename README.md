@@ -78,6 +78,7 @@ Workflows 2 (Docker):
         ## Build image/Dockerfile and run phpstan
 
             .github/workflows/deploy-k8s-docker-phpstan.yml
+            docker/Dockerfile-phpstanr
             misc/phpcs.xml
 
         ## Build image/Dockerfile and run CodeSniffer
