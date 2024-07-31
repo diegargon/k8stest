@@ -1,4 +1,4 @@
-name: PhpStan
+name: Deploy PhpStan
 #
 on:
   push:

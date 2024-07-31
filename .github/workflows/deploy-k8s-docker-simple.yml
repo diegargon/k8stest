@@ -1,4 +1,4 @@
-name: Deploy Application Docker K8s
+name: Deploy Simple
 
 on:
   push:

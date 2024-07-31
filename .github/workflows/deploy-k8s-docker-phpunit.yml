@@ -1,4 +1,4 @@
-name: Deploy Application Docker K8s 2
+name: Deploy phpunit
 #
 on:
   push:

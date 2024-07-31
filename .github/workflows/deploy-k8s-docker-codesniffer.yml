@@ -1,4 +1,4 @@
-name: CodeSniffer
+name: Deploy codesniffer
 #
 on:
   push:
