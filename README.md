@@ -52,7 +52,6 @@ Workflows 1 (Without Docker):
     Files: 
 
         .github/workflows/runons-test
-
         .github/workflows/runons-php
 
 
@@ -92,7 +91,7 @@ Workflows 2 (Docker):
 
 WARNING: 
 
-Point to account not works if is not organization account
+Point to account does not works if is not organization/enterprise account
 
 githubConfigUrl: "https://github.com/diegargon/"    
 
