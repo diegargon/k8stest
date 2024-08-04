@@ -1,9 +1,7 @@
 name: Dev Workflow
 
-#
 # This workflow runs only on dev after X other workflows completed
 # and do nothing
-#
 
 on:
   push:

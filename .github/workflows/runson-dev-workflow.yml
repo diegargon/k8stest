@@ -1,9 +1,7 @@
 name: Dev Workflow Runs
 
-#
 # This workflow runs only if "Dev Workflow" runs
 # and do nothing
-#
 
 on:
     workflow_run:
