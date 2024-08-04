@@ -1,0 +1,20 @@
+name: Dev Done
+
+# This workflow runs only if "Dev Workflow" runs
+# and does nothing
+
+on:
+  workflow_run:
+    workflows: 
+      - "Dev Workflow"
+    types:
+      - completed
+
+jobs:
+  build:
+    runs-on: arc-runner-set
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+  
