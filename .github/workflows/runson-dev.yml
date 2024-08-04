@@ -1,7 +1,7 @@
 name: Dev Workflow
 
 #
-# This workflow runs only on dev
+# This workflow runs only on dev and do nothing
 #
 
 on:
@@ -14,3 +14,8 @@ on:
 jobs:
   build:
     runs-on: arc-runner-set
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+  
