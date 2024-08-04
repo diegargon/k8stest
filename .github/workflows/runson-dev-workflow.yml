@@ -1,20 +1,19 @@
-name: Dev Workflow Runs
+name: DevWorkflowRuns
 
 # This workflow runs only if "Dev Workflow" runs
-# and do nothing
+# and does nothing
 
 on:
-    workflow_run:
-      workflows: 
-        - "Dev Workflow"
-      types:
-        - completed
+  workflow_run:
+    workflows: 
+      - "DevWorkflow"
+    types:
+      - completed
 
 jobs:
   build:
-    runs-on: arc-runner-set
+    runs-on: ubuntu-latest  # Cambia esto a un runner válido
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-  
