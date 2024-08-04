@@ -4,7 +4,6 @@
 [![Deploy phpunit](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker-phpunit.yml/badge.svg)](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker-phpunit.yml)
 [![Deploy codesniffer](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker-codesniffer.yml/badge.svg)](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker-codesniffer.yml)
 [![Deploy PhpStan](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker-phpstan.yml/badge.svg)](https://github.com/diegargon/k8stest/actions/workflows/deploy-k8s-docker-phpstan.yml)
-
 [![Dev Workflow](https://github.com/diegargon/k8stest/actions/workflows/runson-dev.yml/badge.svg)](https://github.com/diegargon/k8stest/actions/workflows/runson-dev.yml)
 
 ![License](https://img.shields.io/github/license/diegargon/k8stest)

@@ -1,6 +1,6 @@
 <?php
 
-require 'greet.php';
+require 'includes/greet.php';
 
 echo greet() . "\n";
 

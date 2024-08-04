@@ -1,17 +1,17 @@
 name: Dev Workflow
 
 #
-# This workflow runs only on dev after X other workflows completed
+# This workflow runs only if "Dev Workflow" runs
 # and do nothing
 #
 
 on:
-  push:
-    branches:
-      - dev
-  pull_request:
-    branches:
-      - dev
+    workflow_run:
+      workflows: 
+        - "Dev Workflow"
+      types:
+        - completed
+
 jobs:
   build:
     runs-on: arc-runner-set
