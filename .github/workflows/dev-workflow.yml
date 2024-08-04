@@ -1,4 +1,4 @@
-name: DevWorkflow
+name: Dev Workflow
 
 # This workflow runs only on dev
 # and do nothing
