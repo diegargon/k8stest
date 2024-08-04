@@ -1,4 +1,4 @@
-name: Workflow Dev Done
+name: Dev Done
 
 # This workflow runs only if "Dev Workflow" runs
 # and does nothing
